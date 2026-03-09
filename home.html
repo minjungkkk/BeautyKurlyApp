@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty Kurly|home</title>
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
   <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Beauty Kurly">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_180.png">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
@@ -494,7 +500,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
+if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service_worker.js')
+        .then(function () {
+          console.log('서비스 워커가 등록됨!');
+        })
+    }
 </script>
 </body>
 </html>
