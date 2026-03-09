@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=395, initial-scale=1.0">
+  <title>Beauty Kurly | Lounge</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+  /* 기본 레이아웃 */
+  body {font-family: 'Pretendard', sans-serif; background-color: #fff8f0; color: #333; display: flex; justify-content: center; align-items: center; min-height: 100vh;  padding: 20px;  text-align: center;}
+
+  h1 {font-size: 2.5rem; color: #ff6f61; margin-bottom: 10px;}
+  h2 {font-size: 1.5rem; color: #666; margin-bottom: 30px;}
+  .header_left_group {margin-top: 20px;}
+  #backBtn {display: inline-block; padding: 12px 25px; background-color: #ff6f61; color: #fff; font-weight: bold; border-radius: 50px; transition: 0.3s;}
+  #backBtn:hover {background-color: #ff856f; transform: translateY(-2px); text-decoration: none;}
+
+  .icon {margin-right: 8px;}
+
+  @media (max-width: 400px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.2rem; }
+    #backBtn { padding: 10px 20px; font-size: 0.9rem; }
+  }
+  </style>
+</head>
+<body>
+<div>
+  <h1>라운지 페이지</h1>
+  <h2>곧 새로운 콘텐츠가 준비됩니다! ✨</h2>
+  <div class="header_left_group">
+    <a href="#" id="backBtn" class="header_btn">
+      <i class="fas fa-redo icon"></i>뒤로가기
+    </a>
+  </div><!-- header_left_group -->
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+<script>
+  const backBtn = document.getElementById('backBtn');
+  backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (history.length > 1) {
+      history.back();
+    } else {
+      location.href = 'home.html';
+    }
+  });
+</script>
+</body>
+</html>

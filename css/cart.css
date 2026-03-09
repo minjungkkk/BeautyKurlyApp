@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+body {width: 395px; margin: 0 auto; background: #fff;}
+
+.header_wrap {height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-sizing: border-box; background-color: #fff; font-weight: 600;}
+.header_left_group {display: flex; align-items: center; gap: 12px;}
+.header_btn i {font-size: 20px; color: #000;}
+.header_title {font-size: 20px; line-height: 1; font-weight: 600;}
+.header_logo img {height: 24px; display: block;}
+.header_icons {display: flex; align-items: center;}
+.header_icons i {font-size: 20px; margin-left: 16px; line-height: 1; color: #000;}
+
+
+.delivery_info { padding: 12px 16px; background: #fff; }
+
+.delivery_tag {display: inline-block; padding: 1px 0; color: #333; font-size: 12px; margin-bottom: 6px;}
+
+.delivery_address {display: flex;  justify-content: space-between; align-items: center; font-size: 14px;
+margin-bottom: 6px; gap: 8px;}
+
+.delivery_address span { flex: 1; line-height: 1.4; word-break: break-word;}
+.delivery_address .btn_change {flex-shrink: 0; background-color: #fff; border: 1px solid #999; border-radius: 5px; color: #000; font-weight: 600; cursor: pointer; padding: 5px 10px; font-size: 12px;}
+.free_delivery {font-size: 12px; margin: 10px 5px 0;}
+.delivery_range { background: #e8e8e8; width: 100%; height: 6px; border-radius: 4px; overflow: hidden; /* position: relative; */
+}
+.delivery_progress { height: 100%; background-color: #e8e8e8; border-radius: 4px; transition: width 0.3s;}
+.free_delivery.free .delivery_progress {background-color: #9344CB;}
+.delivery_text {font-size: 14px; margin-bottom: 4px; display: block;}
+
+.cart_tabs { display: flex; background: #fff; margin-top: 8px; border-radius: 8px;  overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);}
+.cart_tabs .tab { flex: 1; padding: 8px 0; text-align: center; font-size: 14px; border: none; background-color: #fff;  cursor: pointer; transition: all 0.2s ease; color: #555; display: inline-flex; justify-content: center; align-items: center; gap: 4px;}
+.cart_tabs .tab.active { color: #000; font-weight: 600; border-bottom: 2px solid #999; background-color: #fff;}
+.cart_tabs .tab:not(.active):hover { background: #f4f4f4;}
+.tab .item_count { margin-left: 4px; color: #fff; background: #9344CB; font-size: 10px; padding: 2px 5px;
+border-radius: 10px;}
+
+.cart_select {display: flex; justify-content: space-between; align-items: center; padding: 10px 16px;background-color: #fff; margin-top: 8px;}
+.select_delete {border: 1px solid #999; border-radius: 5px; padding: 5px 10px; font-size: 13px;  background: none; color: #000; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1.2;}
+
+.cart_items {padding: 5px 16px; display: none;}
+.cart_items.active {display: block;}
+.cart_item {display: flex; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 10px;}
+.item_left {display: flex; flex-direction: column; align-items: center; margin-right: 10px;}
+.item_left img {width: 100px; height: 106px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;}
+.item_count {display: flex; align-items: center; background: #e7e7e7; border-radius: 12px; overflow: hidden;}
+.item_count button { border: none; background: none; padding: 4px 15px;  cursor: pointer;}
+.item_count span { padding: 0 8px; color: #000; font-size: 15px;}
+
+.cart_frequent {display: none;}
+.frequent_header {display: flex; justify-content: flex-end; padding: 12px 16px; font-size: 14px; color: #666;}
+.empty_text {text-align: center;}
+.go_shopping {display: flex; margin:20px auto; padding: 10px 20px; background: #57047D; color: #fff; border-color: #666; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;}
+
+
+.item_right {flex: 1;}
+.item_right input[type="checkbox"] { margin-bottom: 4px;}
+.item_name {font-size: 14px; margin-bottom: 4px;}
+.item_price .before {font-size: 12px; color: #999; text-decoration: line-through;}
+.item_price .after {font-size: 14px; font-weight: 600;}
+.cart_summary {padding: 10px 16px; background: #fff; margin-top: 8px; font-weight: 500;}
+.summary_row {display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 14px; font-weight: 500;}
+.summary_row .discount {color: red; font-weight: 500;}
+.total_pay { margin: 8px 16px; padding: 14px 0; background: #57047D; color: #fff; text-align: center;  border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;}
+
+
+/* 추천 상품 */
+.recommend_products {padding: 10px 16px;}
+
+.recommend_title {display: flex; align-items: center; padding: 10px 0 5px; margin-bottom: 8px; font-size: 15px; font-weight: bold;}
+
+.recommend_title i {margin-right: 4px; color: #FFD700;}
+
+.recommend_list {display: flex; flex-wrap: wrap; gap: 6px;}
+
+.rec_item {width: calc((100% - 12px) / 3); display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 6px;}
+
+.rec_item img { width: 110px; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 4px;}
+
+.rec_name {font-size: 12px; text-align: left; margin-bottom: 2px; line-height: 1.4; margin-bottom: 4px; display: -webkit-box; --webkit-line-clamp: 2; --webkit-box-orient: vertical; overflow: hidden; word-break: break-word;}
+
+.rec_price {font-size: 12px; font-weight: 600; display: flex; gap: 4px;}
+
+.delivery_tag {display: block; font-size: 11px; color: #999; margin-bottom: 2px; text-align: left;}
+
+.product_price_before {text-decoration: line-through; font-size: 11px; color: #999; margin-bottom: 2px;}
+.product_price {font-size: 13px; font-weight: bold; display: flex; gap: 4px; justify-content: flex-start; width: 100%;}
+.product_price .discount {color: red;}
+
+.product_icon {display: flex; justify-content: flex-end; gap: 8px; margin: 6px 5px 0 auto; font-size: 13px; color: #333; cursor: pointer;}
+.product_icon i {transition: transform 0.15s ease, color 0.15s ease;}
+.product_icon i:hover {color: #555;}
+.product_icon i:active {transform: scale(0.8);}
+
+.blind { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;}

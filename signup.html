@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=395, initial-scale=1.0">
+  <title>Beauty Kurly | 회원가입</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+<style>
+  body {background-color: #f8f9fa; max-width: 400px;}
+  .header_left_group {display: flex; align-items: center; gap: 10px; padding: 15px;    }
+  .header_btn {font-size: 18px; color: #222; text-decoration: none;}
+  .signup_container {max-width: 390px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);}
+</style>
+</head>
+<body>
+<div class="header_left_group">
+  <a href="#" id="back_btn" class="header_btn">
+    <i class="fas fa-times"></i>
+  </a>
+  <h1 class="fs-5 mb-0" >회원가입 (임시페이지)</h1>
+</div><!-- header_left_group -->
+
+<nav class="navbar navbar-dark" style="background-color:#e4adf5;">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand m-0" href="index.html">
+      <img src="images/logo.svg" alt="kurly_logo" style="width: 100px;">
+    </a>
+
+    <div class="d-flex align-items-center text-white">
+      <span id="user_name_display" class="me-2"></span>
+      <button id="logout_button" class="btn btn-danger btn-sm d-none">로그아웃</button>
+    </div>
+  </div><!-- container-fluid -->
+</nav><!-- navbar -->
+
+<div class="container d-flex justify-content-center mt-5">
+  <div class="signup_container">
+    <h2 class="text-center mb-4">회원가입</h2>
+
+    <form id="signup_form">
+      <div class="mb-3">
+        <label for="user_name" class="form-label">성함</label>
+        <input type="text" class="form-control" id="user_name" required autofocus>
+      </div>
+
+      <div class="mb-3">
+        <label for="user_id" class="form-label">아이디</label>
+        <input type="text" class="form-control" id="user_id" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="user_password" class="form-label">비밀번호</label>
+        <input type="password" class="form-control" id="user_password" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 mt-4">
+        회원가입
+      </button>
+    </form><!-- signup_form -->
+  </div><!-- signup_container -->
+</div><!-- container -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+<script>
+  const back_btn = document.getElementById('back_btn');
+  back_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (history.length > 1) {
+      history.back();
+    } else {
+      location.href = 'home.html';
+    }
+  });
+</script>
+</body>
+</html>

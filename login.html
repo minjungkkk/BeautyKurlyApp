@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Kurly|login</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login_container">
+  <div class="top_icons">
+    <i class="fas fa-times close_btn"></i>
+  </div><!-- top_icons -->
+
+  <div class="logo">
+    <img src="images/logo.jpg" alt="컬리로고">
+  </div><!-- logo -->
+
+  <form class="login_form" action="login" method="POST">
+    <div class="input_group">
+      <input type="text" placeholder="아이디" id="username">
+    </div><!-- input_group -->
+
+    <div class="input_group password_group">
+      <input type="password" placeholder="비밀번호" id="password">
+        <i class="fas fa-eye-slash toggle_password"></i>
+    </div><!-- password_group -->
+
+  <div class="checkbox_group">
+    <input type="checkbox" id="save_id">
+      <label for="save_id">아이디 저장</label>
+  </div><!-- checkbox_group -->
+
+    <button type="button" class="login_btn">로그인</button>
+    <button type="button" class="signup_btn">회원가입</button>
+
+  <div class="find_info">
+    <button type="button">아이디 찾기</button>
+    <span>|</span>
+    <button type="button">비밀번호 찾기</button>
+  </div><!-- find_info -->
+</form><!-- login_form -->
+  <hr>
+  <p class="social_text">네이버, 카카오로 <strong>간편하게</strong> 시작하세요</p>
+    <div class="social_buttons">
+      <button class="naver_btn"><img src="images/naver.jpg" alt="naver" width="30" height="30"> 네이버로 시작하기</button>
+      <button class="kakao_btn"><img src="images/kakao.jpg" alt="kakao" width="30" height="30"> 카카오로 시작하기</button>
+    </div><!-- social_buttons -->
+  </div><!-- login_container -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+  <script>
+  // x 아이콘 터치 시 home으로 이동하기
+  const closeBtn = document.querySelector('.close_btn');
+  closeBtn.addEventListener('click', () => {
+    window.location.href = 'home.html';
+  });
+
+
+  const passwordInput = document.getElementById('password');
+  const togglePassword = document.querySelector('.toggle_password');
+  const saveIdCheckbox = document.getElementById('save_id');
+  const usernameInput = document.getElementById('username');
+
+  // 패스워드 토글 온오프하기
+  togglePassword.addEventListener('click', () => {
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    togglePassword.classList.remove('fa-eye-slash');
+    togglePassword.classList.add('fa-eye');
+  } else {
+    passwordInput.type = 'password';
+    togglePassword.classList.remove('fa-eye');
+    togglePassword.classList.add('fa-eye-slash');
+  }
+  });
+
+  // 아이디 저장(localStorage)
+  window.addEventListener('load', () => {
+  const savedUsername = localStorage.getItem('savedUsername');
+  if (savedUsername) {
+    usernameInput.value = savedUsername;
+    saveIdCheckbox.checked = true;
+  }
+  });
+
+  saveIdCheckbox.addEventListener('change', () => {
+  if (saveIdCheckbox.checked) {
+    localStorage.setItem('savedUsername', usernameInput.value.trim());
+  } else {
+    localStorage.removeItem('savedUsername');
+  }
+  });
+
+  // 아이디 입력값 변경 시 체크박스가 체크되어 있으면 로컬스토리지 업데이트해서 반영하기
+  usernameInput.addEventListener('input', () => {
+  if (saveIdCheckbox.checked) {
+    localStorage.setItem('savedUsername', usernameInput.value.trim());
+  }
+  });
+
+  </script>
+</body>
+</html>

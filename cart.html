@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=395, initial-scale=1.0">
+  <title>Beauty Kurly|cart</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+<header class="header_wrap">
+  <div class="header_left_group">
+    <a href="#" class="header_btn">
+      <i class="fas fa-xmark"></i>
+    </a>
+    <span class="header_title">장바구니</span>
+  </div>
+  <div class="header_icons">
+    <a href="search.html"><i class="fas fa-magnifying-glass"></i></a>
+    <a href="#"><i class="fas fa-house"></i></a>
+  </div>
+</header><!-- header_wrap -->
+
+<section class="delivery_info">
+  <h2 class="blind">배송 정보</h2>
+    <div class="delivery_tag">샛별배송</div>
+    <div class="delivery_address">
+      <span>서울시 노원구 가나다로 1길 2, 한국아파트 101동 001호</span>
+      <button class="btn_change">변경</button>
+    </div>
+    <div class="free_delivery free">
+    <span class="delivery_text">n원 추가 시 무료 배송</span>
+    <div class="delivery_range" >
+      <div class="delivery_progress"></div>
+    </div>
+    </div>
+</section><!-- delivery_info -->
+
+<section class="cart_tabs">
+    <h2 class="blind">장바구니</h2>
+    <button class="tab active">담은 상품 <span class="item_count">2</span></button>
+    <button class="tab">자주 구매 상품</button>
+</section>
+
+<section class="cart_select">
+  <h2 class="blind">선택</h2>
+    <div class="select_left">
+      <input type="checkbox" id="script_all" checked>
+      <label for="script_all">전체선택</label>
+    </div>
+    <button class="select_delete">선택삭제</button>
+</section><!-- cart_select -->
+
+<section class="cart_items cart_saved active">
+  <h2 class="blind">담은 상품</h2>
+    <div class="cart_item">
+      <div class="item_left">
+        <img src="images/cart_in1.jpg" alt="상품1">
+        <div class="item_count">
+          <button class="minus">-</button>
+          <span>1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <div class="item_right">
+        <input type="checkbox">
+        <div class="item_name">[포트레] 핸드 크림 누보30ml</div>
+        <div class="item_price">
+          <div class="before">20,000원</div>
+          <div class="after">16,150원</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart_item">
+      <div class="item_left">
+        <img src="images/cart_in2.jpg" alt="상품2">
+        <div class="item_count">
+          <button class="minus">-</button>
+          <span>1</span>
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <div class="item_right">
+        <input type="checkbox">
+        <div class="item_name">[에스트라] 아토베리어365 클렌징밀크 200ml (+밀크 30ml)</div>
+        <div class="item_price">
+          <div class="before">29,000원</div>
+          <div class="after">22,620원</div>
+        </div>
+      </div>
+    </div>
+</section><!-- cart_items cart_saved active -->
+
+<section class="cart_items cart_frequent">
+  <h2 class="blind">자주 구매 상품</h2>
+    <div class="frequent_header">
+      <span class="filter_text">빈도순<i class="fa-solid fa-chevron-down"></i></span>
+    </div>
+
+    <p class="empty_text">최근 구매한 상품이 없습니다.</p>
+    <button class="go_shopping" onclick="location.href='home.html'">쇼핑하러 가기</button>
+</section><!-- cart_items cart_frequent -->
+
+<section class="cart_summary">
+  <h2 class="blind">주문 요약</h2>
+    <div class="summary_row">
+      <span>상품금액</span>
+      <span>38,770원</span>
+    </div>
+    <div class="summary_row">
+      <span>상품할인금액</span>
+      <span class="discount">-10,230원</span>
+    </div>
+    <div class="summary_row">
+      <span>배송비</span>
+      <span>2,500원</span>
+    </div>
+</section><!-- cart_summary -->
+
+<section class="total_pay">
+  <h2 class="blind">총 결제 금액</h2>
+    <span class="total_price">41,270원</span> 주문하기</section><!-- total_pay -->
+
+<section class="recommend_products">
+  <h2 class="blind">추천 상품</h2>
+    <div class="recommend_title">
+      <i class="fas fa-star"></i>
+      <span>건조한 겨울에 어울리는 상품 추천</span></div>
+    <div class="recommend_list">
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec1.jpg" alt="recommend_products">
+        <div class="rec_name">[라부르켓] BEST 립 밤 3종 (택1)</div>
+        <p class="product_price_before">27,000원</p>
+          <p class="product_price">
+            <span class="discount">10%</span>
+            <span class="price">24,300원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec2.jpg" alt="recommend_products">
+        <div class="rec_name">[눅스] 메르비앙스 리프트 오일세럼 30ml</div>
+        <p class="product_price_before">74,000원</p>
+          <p class="product_price">
+            <span class="discount">10%</span>
+            <span class="price">66,600원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec3.jpg" alt="recommend_products">
+        <div class="rec_name">[디어달리아] 파라다이스 블루밍밤 3.1g</div>
+        <p class="product_price_before">28,000원</p>
+          <p class="product_price">
+            <span class="discount">10%</span>
+            <span class="price">25,200원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec4.jpg" alt="recommend_products">
+        <div class="rec_name">[키엘] 울트라 훼이셜 어드밴스드 리페어 베리어 크림 50ml</div>
+        <p class="product_price_before">82,000원</p>
+          <p class="product_price">
+            <span class="discount">15%</span>
+            <span class="price">69,700원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec5.jpg" alt="recommend_products">
+        <div class="rec_name">[닥터지] 블랙 스네일 크림 50ml*2개 (+크림15ml증정)</div>
+        <p class="product_price_before">54,000원</p>
+          <p class="product_price">
+            <span class="discount">48%</span>
+            <span class="price">28,000원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+      <div class="rec_item">
+        <p class="delivery_tag">샛별배송</p>
+        <img src="images/cart_rec6.jpg" alt="recommend_products">
+        <div class="rec_name">[라로슈포제]시카플라스트 밤 B5+ 100ml/ 40ml(택1)</div>
+        <p class="product_price_before">41,000원</p>
+          <p class="product_price">
+            <span class="discount">20%</span>
+            <span class="price">32,800원</span>
+          </p>
+          <div class="product_icon">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+      </div>
+    </div>
+</section><!-- recommend_products -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* 장바구니 금액 계산 */
+  function updateCartSummary() {
+    const cartItems = document.querySelectorAll('.cart_item'); // 매번 새로 가져오기
+    const freeDeliveryThreshold = 40000;
+    const defaultDeliveryFee = 2500;
+
+    let totalPrice = 0;
+    let totalDiscount = 0;
+    let selectedCount = 0;
+
+    // 선택된 상품 합계 계산
+    cartItems.forEach(item => {
+      const chk = item.querySelector('input[type="checkbox"]');
+      if (!chk.checked) return;
+
+      selectedCount++;
+
+      const count = parseInt(item.querySelector('.item_count span').textContent);
+      const priceBefore = parseInt(item.querySelector('.item_price .before').textContent.replace(/[^0-9]/g,''));
+      const priceAfter = parseInt(item.querySelector('.item_price .after').textContent.replace(/[^0-9]/g,''));
+
+      totalPrice += priceAfter * count;
+      totalDiscount += (priceBefore - priceAfter) * count;
+    });
+
+    // 배송비 계산
+    const deliveryFeeUI = (selectedCount > 0 && totalPrice >= freeDeliveryThreshold) ? 0 : defaultDeliveryFee;
+
+    // 총액 계산
+    const totalPay = (selectedCount > 0) ? totalPrice + (totalPrice < freeDeliveryThreshold ? defaultDeliveryFee : 0) : 0;
+
+    // 무료배송 바 반영
+    const deliveryText = document.querySelector('.delivery_text');
+    const deliveryProgress = document.querySelector('.delivery_progress');
+
+    if (selectedCount === 0) {
+      deliveryText.textContent = '상품을 선택해주세요';
+      deliveryProgress.style.width = '0%';
+      deliveryProgress.classList.remove('free');
+    } 
+    else if (totalPrice >= freeDeliveryThreshold) {
+      deliveryText.textContent = '무료 배송 가능';
+      deliveryProgress.style.width = '100%';
+      deliveryProgress.classList.add('free');
+    } 
+    else {
+      const remain = freeDeliveryThreshold - totalPrice;
+      const percent = Math.min((totalPrice / freeDeliveryThreshold) * 100, 100);
+
+      deliveryText.textContent = `${remain.toLocaleString()}원 추가 시 무료 배송`;
+      deliveryProgress.style.width = `${percent}%`;
+      deliveryProgress.classList.remove('free');
+    }
+
+    // UI 업데이트
+    document.querySelector('.cart_summary .summary_row:nth-child(1) span:last-child').textContent = totalPrice.toLocaleString() + '원';
+    document.querySelector('.cart_summary .summary_row:nth-child(2) .discount').textContent = '-' + totalDiscount.toLocaleString() + '원';
+    document.querySelector('.cart_summary .summary_row:nth-child(3) span:last-child').textContent = deliveryFeeUI.toLocaleString() + '원';
+    document.querySelector('.total_price').textContent = totalPay.toLocaleString() + '원';
+  }
+
+  /* 헤더 x */
+  const headerX = document.querySelector('.header_btn');
+  const headerSearch = document.querySelector('.header_icons a:nth-child(1)');
+  const headerHome = document.querySelector('.header_icons a:nth-child(2)');
+
+  if (headerX) {
+    headerX.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (document.referrer) {
+        history.back();
+      } else {
+        location.href = 'home.html';
+      }
+    });
+  }
+
+  if (headerSearch) {
+    headerSearch.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.href = 'search.html';
+    });
+  }
+
+  if (headerHome) {
+    headerHome.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.href = 'home.html';
+    });
+  }
+
+  /* 장바구니 */
+  const selectAll = document.getElementById('script_all');
+  const selectDelete = document.querySelector('.select_delete');
+  let cartItems = document.querySelectorAll('.cart_item');
+
+  // 전체선택 디폴트
+  selectAll.checked = true;
+  cartItems.forEach(item => {
+    const chk = item.querySelector('input[type="checkbox"]');
+    chk.checked = true;
+  });
+
+  function updateSelectAllState() {
+    const allChecked = [...cartItems].every(item => item.querySelector('input[type="checkbox"]').checked);
+    selectAll.checked = allChecked;
+    updateCartSummary();
+  }
+
+  cartItems.forEach(item => {
+    const chk = item.querySelector('input[type="checkbox"]');
+    chk.addEventListener('change', updateSelectAllState);
+  });
+
+  selectAll.addEventListener('change', () => {
+    cartItems.forEach(item => {
+      const chk = item.querySelector('input[type="checkbox"]');
+      chk.checked = selectAll.checked;
+    });
+    updateCartSummary();
+  });
+
+  selectDelete.addEventListener('click', () => {
+    cartItems.forEach(item => {
+      const chk = item.querySelector('input[type="checkbox"]');
+      if(chk.checked) item.remove();
+    });
+    cartItems = document.querySelectorAll('.cart_item');
+    cartItems.forEach(item => {
+      const chk = item.querySelector('input[type="checkbox"]');
+      chk.addEventListener('change', updateSelectAllState);
+    });
+    updateSelectAllState();
+  });
+
+  // 수량 + -
+  function bindCountEvents() {
+    cartItems.forEach(item => {
+      const minusBtn = item.querySelector('.minus');
+      const plusBtn = item.querySelector('.plus');
+      const countSpan = item.querySelector('.item_count span');
+
+      minusBtn.onclick = () => {
+        let count = parseInt(countSpan.textContent);
+        if(count > 1) countSpan.textContent = --count;
+        updateCartSummary();
+      };
+
+      plusBtn.onclick = () => {
+        let count = parseInt(countSpan.textContent);
+        countSpan.textContent = ++count;
+        updateCartSummary();
+      };
+    });
+  }
+
+  bindCountEvents();
+
+  // 탭 전환
+  const tabs = document.querySelectorAll('.cart_tabs .tab');
+  const cartSelect = document.querySelector('.cart_select');
+  const savedCart = document.querySelector('.cart_saved');
+  const frequentCart = document.querySelector('.cart_frequent');
+  const cartSummary = document.querySelector('.cart_summary');
+  const total_pay = document.querySelector('.total_pay');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      if (index === 0) {
+        cartSelect.style.display = '';
+        savedCart.style.display = '';
+        frequentCart.style.display = 'none';
+        cartSummary.style.display = '';
+        total_pay.style.display = '';
+      } else {
+        cartSelect.style.display = 'none';
+        savedCart.style.display = 'none';
+        frequentCart.style.display = 'block';
+        cartSummary.style.display = 'none';
+        total_pay.style.display = 'none';
+      }
+      updateCartSummary();
+    });
+  });
+
+  // 초기 계산
+  updateCartSummary();
+});
+</script>
+</body>
+</html>

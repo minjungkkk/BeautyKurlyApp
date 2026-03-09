@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Kurly|product_list</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/product_list.css">
+</head>
+<body>
+<div class="header_sticky">
+  <header class="header_wrap">
+    <div class="header_logo">
+      <a href="home.html">
+        <img src="images/logo.jpg" alt="컬리 로고">
+      </a>
+    </div>
+    <div class="header_icons">
+      <a href="alert.html"><i class="fa-regular fa-bell"></i></a>
+      <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </header><!-- header_wrap -->
+
+  <nav class="sub_menu_wrap">
+    <ul class="sub_menu_list">
+      <li><a href="#">컬리추천</a></li>
+      <li><a href="#">베스트</a></li>
+      <li><a href="#">세일</a></li>
+      <li><a href="product_list.html" class="highlight">신상품</a></li>
+      <li><a href="#">브랜드관</a></li>
+      <li><a href="#">특가/혜택</a></li>
+    </ul>
+  </nav><!-- sub_menu_wrap -->
+</div><!-- header_sticky -->
+
+  <section class="icon_menu_wrap">
+  <div class="icon_menu_row">
+    <div class="icon_item">
+      <i class="fa-solid fa-star"></i>
+      <span>신상품</span>
+    </div>
+    <div class="icon_item">
+      <i class="fa-solid fa-scissors"></i>
+      <span>헤어&바디</span>
+    </div>
+    <div class="icon_item">
+      <i class="fa-solid fa-soap"></i>
+      <span>스킨케어</span>
+    </div>
+    <div class="icon_item">
+      <i class="fa-solid fa-gem"></i>
+      <span>럭셔리뷰티</span>
+    </div>
+    <div class="icon_item">
+      <i class="fa-solid fa-fire"></i>
+      <span>요즘인기</span>
+    </div>
+  </div><!-- icon_menu_row -->
+  </section><!-- icon_menu_wrap -->
+
+  <section class="product_filter_wrap">
+    <div class="filter_top">
+      <span class="total_count">총 120개</span>
+      <div class="filter_buttons">
+        <div class="sort_button">추천순<i class="fa-solid fa-chevron-down"></i>
+          <ul class="sort_list">
+            <li>추천순</li>
+            <li>신상품순</li>
+            <li>판매량순</li>
+            <li>혜택순</li>
+            <li>높은 가격순</li>
+            <li>낮은 가격순</li>
+          </ul><!-- sort_list -->
+        </div><!-- sort_button -->
+        <div class="filter_button">필터<i class="fa-solid fa-filter"></i></div>
+      </div><!-- filter_buttons -->
+    </div><!-- filter_top -->
+  </section><!-- product_filter_wrap -->
+
+  <div class="filter_modal">
+    <div class="filter_modal_content">
+      <h3>필터 선택</h3>
+
+    <div class="filter_section">
+      <button class="filter_section_btn">카테고리</button>
+        <div class="filter_options">
+          <label><input type="checkbox"> 스킨케어</label>
+          <label><input type="checkbox"> 메이크업</label>
+          <label><input type="checkbox"> 헤어&바디</label>
+          <label><input type="checkbox"> 럭셔리뷰티</label>
+        </div>
+      </div>
+
+      <div class="filter_section">
+        <button class="filter_section_btn">금액대</button>
+        <div class="filter_options">
+          <label><input type="checkbox"> 1만원 이하</label>
+          <label><input type="checkbox"> 1~3만원</label>
+          <label><input type="checkbox"> 3~5만원</label>
+          <label><input type="checkbox"> 5만원 이상</label>
+        </div>
+      </div>
+
+      <div class="filter_section">
+        <button class="filter_section_btn">브랜드</button>
+        <div class="filter_options">
+          <label><input type="checkbox"> 에스트라</label>
+          <label><input type="checkbox"> 달바</label>
+          <label><input type="checkbox"> 센카</label>
+          <label><input type="checkbox"> 셀리맥스</label>
+          <label><input type="checkbox"> 바닐라코</label>
+          <label><input type="checkbox"> 한율</label>
+          <label><input type="checkbox"> 랑콤</label>
+          <label><input type="checkbox"> 아떼</label>
+          <label><input type="checkbox"> 세타필</label>
+        </div>
+      </div>
+
+      <div class="filter_section">
+        <button class="filter_section_btn">배송방식</button>
+        <div class="filter_options">
+          <label><input type="checkbox"> 샛별배송</label>
+          <label><input type="checkbox"> 업체배송</label>
+        </div>
+      </div>
+
+      <div class="filter_modal_bottom">
+        <button class="filter_reset">초기화</button>
+        <button class="filter_apply">필터 적용</button>
+      </div>
+    </div><!-- filter_modal_content -->
+  </div><!-- filter_modal -->
+
+  <section class="product_list_wrap">
+    <div class="product_list">
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro1.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[셀리맥스] 더 리얼 노니 카밍글로우 패드 50매</p>
+        <p class="product_price_before">25,000원</p>
+        <p class="product_price">
+          <span class="discount">28%</span>
+          <span class="price">17,955원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro2.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[바닐라코] 홀리데이 에디션 커버리셔스 얼티밋 화이트</p>
+        <p class="product_price_before">30,000원</p>
+        <p class="product_price">
+          <span class="discount">30%</span>
+          <span class="price">31,000원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro3.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[한율] 달빛유자 클렌징 필링 젤 밤 듀오 기획세트</p>
+        <p class="product_price_before">58,000원</p>
+        <p class="product_price">
+          <span class="discount">24%</span>
+          <span class="price">44,080원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro4.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[랑콤] 이돌 코쿤 미 센티드 바디 크림 200ml</p>
+        <p class="product_price_before">95,000원</p>
+        <p class="product_price">
+          <span class="discount">15%</span>
+          <span class="price">80,750원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro5.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[아떼] 어센틱 립 글로이 밤 3.3g 6종 (택1)</p>
+        <p class="product_price_before">33,000원</p>
+        <p class="product_price">
+          <span class="discount">28%</span>
+          <span class="price">23,655원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro6.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[세타필] 세라마이드 가려움완화 로션 473ml</p>
+        <p class="product_price_before">28,000원</p>
+        <p class="product_price">
+          <span class="discount">28%</span>
+          <span class="price">19,900원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro7.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[포트레] 핸드 크림 누보30ml 7종 (택1)</p>
+        <p class="product_price_before">20,000원</p>
+        <p class="product_price">
+          <span class="discount">19%</span>
+          <span class="price">16,150원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro8.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[코스노리] 이지 브로우 체인저 5회분 2종 (택1)</p>
+        <p class="product_price_before">30,000원</p>
+        <p class="product_price">
+          <span class="discount">26%</span>
+          <span class="price">22,000원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro9.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[르네휘테르] 토뉘시아 샴푸 600ml*2 + 포티샤 세럼 100ml 기프트세트</p>
+        <p class="product_price_before">162,000원</p>
+        <p class="product_price">
+          <span class="discount">28%</span>
+          <span class="price">116,640원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+      <div class="product_item">
+        <p class="delivery_tag">샛별배송</p>
+        <div class="product_img">
+          <a href="#"><img src="images/pro10.jpg" alt="product"></a>
+        </div>
+        <p class="product_name">[아베다] 어드밴스드 보태니컬 키네틱스플럼핑 크림 50ml (+크림 10ml 증정)</p>
+        <p class="product_price_before">55,000원</p>
+        <p class="product_price">
+          <span class="discount">15%</span>
+          <span class="price">46,750원</span>
+        </p>
+        <div class="product_icon">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div><!-- product_item -->
+    </div><!-- product_list -->
+
+    <button class="scroll_top"><i class="fa-solid fa-arrow-up"></i></button>
+  </section><!-- product_list_wrap -->
+
+<footer>
+  <nav class="bottom_nav">
+    <a href="index.html" class="nav_icon">
+      <i class="fas fa-bars"></i>
+      <span>카테고리</span>
+    </a>
+    <a href="search.html" class="nav_icon">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>검색</span>
+    </a>
+    <a href="home.html" class="nav_icon active">
+      <i class="fa-solid fa-house"></i>
+      <span>홈</span>
+    </a>
+    <a href="lounge.html" class="nav_icon">
+      <i class="fa-regular fa-comments"></i>
+      <span>라운지</span>
+    </a>
+    <a href="my_page.html" class="nav_icon nav_mypage">
+      <i class="fa-regular fa-user"></i>
+      <span>마이컬리</span>
+    </a>
+  </nav><!-- bottom_nav -->
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+<script>
+/* 상단 스티키메뉴에 스크롤하면 그림자 생성하기 */
+const headerSticky = document.querySelector('.header_sticky');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    headerSticky.classList.add('is_scrolled');
+  } else {
+    headerSticky.classList.remove('is_scrolled');
+  }
+});
+
+/* 모달 부분 */
+const filterBtn = document.querySelector('.filter_button');
+const filterModal = document.querySelector('.filter_modal');
+
+// 모달 열기
+filterBtn.addEventListener('click', () => {
+  filterModal.style.display = 'flex';
+  setTimeout(() => {
+    filterModal.classList.add('active');
+  }, 10);
+});
+
+// 모달 닫기 (배경 클릭)
+filterModal.addEventListener('click', (e) => {
+  if(e.target === filterModal) {
+    filterModal.classList.remove('active');
+    setTimeout(() => {
+      filterModal.style.display = 'none';
+    }, 300);
+  }
+});
+
+const sectionBtns = document.querySelectorAll('.filter_section_btn');
+
+sectionBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const section = btn.parentElement;
+    section.classList.toggle('active'); // 토글: 접기/펼치기
+  });
+});
+
+const resetBtn = document.querySelector('.filter_reset');
+
+resetBtn.addEventListener('click', () => {
+  // 모달 안 모든 체크박스를 선택
+  const checkboxes = document.querySelectorAll('.filter_modal_content input[type="checkbox"]');
+  
+  // 체크 해제
+  checkboxes.forEach(cb => cb.checked = false);
+});
+
+/* 필터적용 버튼 클릭 시 닫기 */
+const applyBtn = document.querySelector('.filter_apply');
+applyBtn.addEventListener('click', () => {
+  filterModal.classList.remove('active');
+  scrollTopBtn.classList.remove('hide'); // 스크롤 버튼 다시 표시
+
+  setTimeout(() => {
+    filterModal.style.display = 'none';
+  }, 300);
+});
+
+  /* 추천순, 필터 버튼 분리*/
+  const sortBtn = document.querySelector('.sort_button');
+  const sortList = document.querySelector('.sort_list');
+const sortItems = sortList.querySelectorAll('li');
+  sortBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 이벤트 버블링 방지
+    sortList.classList.toggle('active');
+  });
+
+  // 바깥 클릭 시 닫기
+  document.addEventListener('click', () => {
+    sortList.classList.remove('active');
+  });
+
+  // 기본값: 추천순에서 다른 li로 전환 시 디폴트값 반영
+  let selectedSort = '추천순';
+
+  sortItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      selectedSort = e.target.textContent; // 선택값 저장
+      sortBtn.childNodes[0].textContent = selectedSort; // 버튼 텍스트 변경
+      sortList.classList.remove('active'); // 드롭다운 닫기
+
+      // 여기서 실제 정렬 함수 호출 가능
+      console.log('선택된 정렬:', selectedSort);
+      // sortProducts(selectedSort);
+    });
+  });
+
+  /* 필터 모달 열었을때 최상단화살표 비노출 */
+  /* 스크롤에 따라 최상단화살표의 투명도 변화 */
+  const scrollTopBtn = document.querySelector('.scroll_top');
+  const bottomNav = document.querySelector('.bottom_nav');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const scrollBottom =
+      document.documentElement.scrollHeight -
+      window.scrollY -
+      window.innerHeight;
+
+    // 맨 위
+    if (scrollY < 200) {
+      scrollTopBtn.style.opacity = '0';
+    }
+    // 맨 아래 근처
+    else if (scrollBottom < bottomNav.offsetHeight + 30) {
+      scrollTopBtn.style.opacity = '0.9';
+    }
+    // 중간 구간
+    else {
+      scrollTopBtn.style.opacity = '0.6';
+    }
+});
+
+  /* 하단 스크롤 되었을때 화살표 위로 올리기 */
+  window.addEventListener('scroll', () => {
+  const scrollBottom =
+    document.documentElement.scrollHeight -
+    window.scrollY -
+    window.innerHeight;
+
+  // 바닥에 가까워지면 위로
+  if (scrollBottom < 120) {
+    scrollTopBtn.style.bottom = '115px';
+  } else {
+    scrollTopBtn.style.bottom = '60px';
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+// 모달 열기
+filterBtn.addEventListener('click', () => {
+  scrollTopBtn.classList.add('hide');
+  filterModal.style.display = 'flex';
+  setTimeout(() => {
+    filterModal.classList.add('active');
+  }, 10);
+});
+
+// 모달 닫기
+filterModal.addEventListener('click', (e) => {
+  if (e.target === filterModal) {
+    filterModal.classList.remove('active');
+    scrollTopBtn.classList.remove('hide');
+    setTimeout(() => {
+      filterModal.style.display = 'none';
+    }, 300);
+  }
+});
+  </script>
+</body>
+</html>

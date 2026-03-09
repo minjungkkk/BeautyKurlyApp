@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=395, initial-scale=1.0">
+  <title>Beauty Kurly|my page</title>
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="images/favicon_512.png" sizes="512x512" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/my_page.css">
+</head>
+<body>
+<header class="header_wrap">
+  <div class="header_title">마이컬리</div>
+  <div class="header_icons">
+    <a href="alert.html"><i class="fa-regular fa-bell"></i></a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+</header><!-- header_wrap -->
+
+  <section class="welcome">
+  <h2 class="blind">환영 메시지</h2>
+    <div class="welcome_left">
+      <p class="welcome_text">
+        반가워요<span class="username" id="username"></span>님!
+      </p>
+
+      <div class="address">
+        <i class="fa-solid fa-location-dot"></i>
+        <a href="#">배송지관리</a>
+      </div>
+    </div>
+  </section><!-- welcome -->
+
+  <section class="order_status">
+    <h3>진행중인 주문 (최근 30일 내)</h3>
+
+    <ul class="status_list">
+      <li>
+        <a href="#">
+          <strong>1</strong>
+          <span>결제완료</span></a>
+      </li>
+      <li>
+        <a href="#">
+        <strong>1</strong>
+        <span>배송준비중</span></a>
+      </li>
+      <li>
+        <a href="#">
+        <strong>0</strong>
+        <span>배송중</span></a>
+      </li>
+      <li>
+        <a href="#">
+        <strong>3</strong>
+        <span>배송완료</span></a>
+      </li>
+    </ul>
+
+    <ul class="icon_menu">
+      <li><a href="#">
+        <i class="fas fa-list"></i>
+        <span>주문내역</span></a>
+      </li>
+      <li><a href="#">
+        <i class="fas fas fa-retweet"></i>
+        <span>취소·반품</span></a>
+      </li>
+      <li><a href="#">
+        <i class="fas fa-ticket"></i>
+        <span>쿠폰</span></a>
+      </li>
+      <li><a href="#">
+        <i class="fas far fa-heart"></i>
+        <span>찜</span></a>
+      </li>
+    </ul>
+  </section><!-- order_status -->
+
+  <section class="point_box">
+  <h3 class="blind">포인트 정보</h3>
+    <div class="row">
+      <span>적립금</span>
+      <span>0원</span>
+    </div>
+    <div class="row">
+      <span>컬리캐시</span>
+      <span>0원</span>
+    </div>
+  </section><!-- point_box -->
+
+
+  <div class="review_box">
+    <a href="#">리뷰쓰기 3건</a>
+  </div>
+
+  <section class="menu_group">
+    <div class="menu_block">
+      <h4>쇼핑</h4>
+      <ul>
+        <li><a href="#">결제수단·컬리페이</a></li>
+        <li><a href="#">자주 산 상품</a></li>
+        <li><a href="#">취소·반품 내역</a></li>
+        <li><a href="#">상품 후기</a></li>
+        <li><a href="#">선물 내역</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>혜택</h4>
+      <ul>
+        <li><a href="#">쿠폰</a></li>
+        <li><a href="#">적립금</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>계정관리</h4>
+      <ul>
+        <li><a href="#">개인정보 수정</a></li>
+        <li><a href="#">배송지 관리</a></li>
+        <li><a href="#">알림 설정</a></li>
+        <li><a href="#">비밀번호 변경</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>고객센터</h4>
+      <ul>
+        <li><a href="#">1:1 문의</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>이용안내</h4>
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">배송안내</a></li>
+        <li><a href="#">환불정책</a></li>
+        <li><a href="#">컬리소개</a></li>
+        <li><a href="#">채용정보</a></li>
+        <li><a href="#">제휴문의</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>기타</h4>
+      <ul>
+        <li><a href="#">이벤트</a></li>
+      </ul>
+    </div>
+
+    <div class="menu_block">
+      <h4>
+        앱 정보<span class="version">v3.65.1</span>
+      </h4>
+      <ul>
+        <li><a href="#">오픈소스 라이선스</a></li>
+        <li><a href="#">공지사항</a></li>
+      </ul>
+    </div>
+
+    <div class="logout">
+      <button id="logout_button">로그아웃</button>
+      <span id="sign_out" class="sign_out">회원탈퇴</span>
+    </div>
+  </section><!-- menu_group -->
+
+  <footer>
+    <nav class="bottom_nav">
+      <a href="index.html" class="nav_icon">
+        <i class="fas fa-bars"></i>
+        <span>카테고리</span>
+      </a>
+      <a href="search.html" class="nav_icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>검색</span>
+      </a>
+      <a href="home.html" class="nav_icon active">
+        <i class="fa-solid fa-house"></i>
+        <span>홈</span>
+      </a>
+      <a href="lounge.html" class="nav_icon">
+        <i class="fa-regular fa-comments"></i>
+        <span>라운지</span>
+      </a>
+      <a href="my_page.html" class="nav_icon nav_mypage">
+        <i class="fa-regular fa-user"></i>
+        <span>마이컬리</span>
+      </a>
+    </nav><!-- bottom_nav -->
+  </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/script_all.js"></script>
+</body>
+</html>
